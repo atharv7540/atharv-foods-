@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atharv </title>
+  <link rel="stylesheet" href="style.css">
+  
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <header>
+    <img class="logo" src="data:image/png;base64,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" alt="logo">
+    <nav>
+      <a href="#home">Home</a> 
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="cart.html">Cart <span id="cart-count">0</span></a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <div class="home-text">
+      <h1>Order Food Online</h1>
+      <input type="text" placeholder="Search for restaurants or dishes">
+    </div>
+  </section>
+  <section id="menu">
+    <main class="menu">
+      <h2>Explore Our Menu</h2>
+      <div class="search-bar">
+        <input type="text" placeholder="Search dishes..." />
+      </div>
+  <div class="menu-category">
+    <h3>🍛 Recommended</h3>
+    <div class="menu-items">
+      <div class="menu-card">
+        <img src="chicken curry.avif" alt="Chicken Curry" />
+        <h3>Chicken Curry</h3>
+        <p>Spicy and rich Indian chizzy chicken curry</p>
+        <div class="meta">
+          <span class="price">₹210</span>
+          <span class="rating">⭐ 4.4</span>
+        </div>
+        <div class="category">North Indian</div>
+         <button onclick="addTocart('Chicken Curry')">Add to Cart</button>
+      </div>
+      <div class="menu-card">
+        <img src="paneer masala.avif" alt="Paneer Masala" />
+        <h3>Paneer Masala</h3>
+        <p>Rich paneer in creamy tomato gravy with butter</p>
+        <div class="meta">
+          <span class="price">₹180</span>
+          <span class="rating">⭐ 4.2</span>
+        </div>
+        <div class="category">Vegetarian</div>
+         <button onclick="addTocart('Paneer Masala')">Add to Cart</button>
+      </div>
+      <div class="menu-card">
+        <img src="chicken tikka.webp" alt="Chicken Tikka Masala" />
+        <h3>Chicken Tikka Masala</h3>
+        <p>Grilled chicken in spicy creamy tomato sauce</p>
+        <div class="meta">
+          <span class="price">₹280</span>
+          <span class="rating">⭐ 4.3</span>
+        </div>
+        <div class="category">North Indian</div>
+      <button onclick="addTocart('Chicken Tikka Masala')">Add to Cart</button>      
+     </div>
+      <div class="menu-card">
+        <img src="biryani.avif" alt="Biryani" />
+        <h3>Chicken Biryani</h3>
+        <p>Spiced chicken layered with fragrant basmati rice</p>
+        <div class="meta">
+          <span class="price">₹250</span>
+          <span class="rating">⭐ 4.5</span>
+        </div>
+        <div class="category">Hyderabadi</div>
+       <button onclick="addTocart('Chicken Biryani')">Add to Cart</button>
+      </div>
+  <div class="menu-category">
+    <h3>🍝 Chinese</h3>
+    <div class="menu-items">
+      <div class="menu-card">
+        <img src="veg fried rice.avif" alt="Fried Rice" />
+        <h3>Veg Fried Rice</h3>
+        <p>Flavorful stir-fried rice with vegetables</p>
+        <div class="meta">
+          <span class="price">₹160</span>
+          <span class="rating">⭐ 4.0</span>
+        </div>
+        <div class="category">Chinese</div>
+        <button onclick="addTocart('Veg Fried Rice')">Add to Cart</button>
+      </div>
+       <div class="menu-card">
+        <img src="munchurian.webp" alt="Manchurian" />
+        <h3>Veg Manchurian</h3>
+        <p>Crispy balls in spicy Manchurian sauce</p>
+        <div class="meta">
+          <span class="price">₹170</span>
+          <span class="rating">⭐ 4.1</span>
+        </div>
+        <div class="category">Chinese</div>
+        <button onclick="addTocart('Veg Manchurian')">Add to Cart</button>
+      </div>
+     <div class="menu-card">
+          <img src="hakka noodels.avif" alt="Hakka Noodles">
+          <h3>Hakka Noodles</h3>
+          <p>Wok-tossed noodles with veggies & soy sauce</p>
+          <div class="meta">
+        <span class="price">₹150</span>
+      <span class="rating">⭐ 4.7</span>
+      </div>
+        <div class="category">Chinese</div>
+          <button onclick="addToCart('Hakka Noodles')">Add to Cart</button>
+        </div>
+         <div class="menu-card">
+        <img src="dim sum.webp" alt="Dim Sum" />
+        <h3>Dim Sum</h3>
+        <p>Steamed dumplings filled with seasoned veggies or meat</p>
+        <div class="meta">
+          <span class="price">₹130</span>
+          <span class="rating">⭐ 3.7</span>
+        </div>
+        <div class="category">Chinese</div>
+        <button onclick="addTocart('Dim Sum')">Add to Cart</button>
+      </div>
+  </div>
+   <div class="menu-category">
+    <h3>🥪 Snacks</h3>
+    <div class="menu-items">
+      <div class="menu-card">
+        <img src="samosa.avif" alt="Samosa" />
+        <h3>Samosa </h3>
+        <p>Crispy fried snack with spicy filling</p>
+        <div class="meta">
+          <span class="price">₹40</span>
+          <span class="rating">⭐ 4.3</span>
+        </div>
+        <div class="category">Snacks</div>
+       <button onclick="addTocart('Samosa')">Add to Cart</button>
+      </div>
+       <div class="menu-card">
+        <img src="sandwich.avif" alt="Sandwich" />
+        <h3>Grilled Sandwich</h3>
+        <p>Toasted bread with veggies & cheese</p>
+        <div class="meta">
+          <span class="price">₹90</span>
+          <span class="rating">⭐ 4.0</span>
+        </div>
+        <div class="category">Snacks</div>
+        <button onclick="addTocart('Grilled Sandwich')">Add to Cart</button>
+      </div>
+      <div class="menu-card">
+  <img src="puff.avif" alt="Veg Puff" />
+  <h3>Veg Puff</h3>
+  <p>Flaky puff filled with spicy vegetables</p>
+  <div class="meta">
+    <span class="price">₹30</span>
+    <span class="rating">⭐ 4.1</span>
+  </div>
+  <div class="category">Snacks</div>
+  <button onclick="addTocart('Veg Puff')">Add to Cart</button>
+</div>
+<div class="menu-card">
+    <img src="fries.avif" alt="Fries" />
+    <h4>Fries</h4>
+    <p>Golden crisp fries lightly salted and served hot</p>
+    <div class="meta">
+      <span class="price">₹80</span>
+      <span class="rating">⭐ 4.4</span>
+    </div>
+    <div class="category">Snacks</div>
+   <button onclick="addToCart('Fries')">Add to Cart</button>
+  </div>
+    </div>
+  </div>
+  <div class="menu-category">
+  <h3>🧁 Desserts</h3>
+  <div class="menu-items">
+    <div class="menu-card">
+      <img src="cake.avif" alt="Cake" />
+      <h4>Chocolate Cake</h4>
+      <p>Rich and moist dark chocolate cake topped with silky chocolate</p>
+      <div class="meta">
+        <span class="price">₹150</span>
+      <span class="rating">⭐ 4.1</span>
+      </div>
+        <div class="category">Dessert</div>
+      <button onclick="addToCart('Chocolate Cake')">Add to Cart</button>
+    </div>
+    <div class="menu-card">
+      <img src="vaniice.avif" alt="Ice Cream" />
+      <h4>Vanilla Ice Cream</h4>
+      <p>Classic vanilla scoop with creamy texture</p>
+     <div class="meta">
+        <span class="price">₹190</span>
+      <span class="rating">⭐ 4.0</span>
+      </div>
+        <div class="category">Dessert</div>
+      <button onclick="addToCart('Vanilla Ice Cream')">Add to Cart</button>
+    </div>
+    <div class="menu-card">
+    <img src="gulab jam.webp" alt="Gulab Jamun" />
+    <h4>Gulab Jamun</h4>
+    <p>Soft, sweet milk dumplings soaked in fragrant sugar syrup</p>
+    <div class="meta">
+      <span class="price">₹50</span>
+      <span class="rating">⭐ 4.6</span>
+    </div>
+    <div class="category">Dessert</div>
+   <button onclick="addToCart('Gulab Jamun')">Add to Cart</button>
+  </div>
+    <div class="menu-card">
+    <img src="rasgulla.webp" alt="Rasgulla" />
+    <h4>Rasgulla</h4>
+    <p>Soft and juicy milk balls soaked in light sugar syrup</p>
+    <div class="meta">
+      <span class="price">₹45</span>
+      <span class="rating">⭐ 4.4</span>
+    </div>
+    <div class="category">Dessert</div>
+   <button onclick="addToCart('Rasgulla')">Add to Cart</button>
+  </div>
+  </div>
+</div>
+   </section>
+  <section class="restaurants">
+    <h2>Popular Restaurants</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="pizza.webp" alt="Pizza">
+        <h3>Domino's</h3>
+        <p>Italian, Pizza</p>
+      </div>
+      <div class="card">
+        <img src="burger.avif"alt="Burger">
+        <h3>McDonald's</h3>
+        <p>Fast Food, Burgers</p>
+      </div>
+      <div class="card">
+        <img src="biryani.avif"alt="Biryani">
+        <h3>Biryani House's</h3>
+        <p>Indian, Biryani</p>
+      </div>
+      <div class="card">
+        <img src="pasta.avif" alt="Pasta">
+        <h3>Little italy's</h3>
+        <p>Pasta</p>
+      </div>
+    <div class="card">
+      <img src="masala dosa.avif" alt="Masala Dosa">
+      <h3>Farmlore's</h3>
+        <p>Masala Dosa</p>
+    </div>
+    <div class="card">
+      <img src="colddrink.avif" alt="Cold Drinks">
+      <h3>Harlay's</h3>
+        <p>Cold Drinks</p>
+    </div>
+    <div class="card">
+      <img src="icecreame.webp" alt="Icecreame">
+      <h3>Joe's</h3>
+      <p>Icecreame</p>
+    </div>
+        <div class="card">
+          <img src="vadapav.webp" alt="Vadapav">
+          <h3>Mauli's</h3>
+          <p>Vadapav</p>
+        </div>
+    </div>
+  </section>
+  <section id="about">
+    <div class="abou-text">
+      <h1>About Us</h1>
+      <p>Delivering happiness, one order at a time.</p>
+    </div>
+  </section>
+
+  <main class="content">
+
+    <section class="fade-in">
+      <h2>Our Mission</h2>
+      <p>To bring delicious food from your favorite restaurants straight to your doorstep — fast, fresh, and affordable.</p>
+    </section>
+
+    <section class="fade-in">
+      <h2>Our Vision</h2>
+      <p>To be India’s most customer-centric food delivery platform, connecting people with their cravings anytime, anywhere.</p>
+    </section>
+
+    <section class="fade-in">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>🚀 Superfast Delivery</li>
+        <li>📍 Live Order Tracking</li>
+        <li>🍴 Huge Restaurant Network</li>
+        <li>💸 Best Offers & Cashback</li>
+      </ul>
+    </section>
+
+    <section class="fade-in testimonials">
+      <h2>What Our Users Say</h2>
+      <div class="testimonial">
+        <p>"Atharv Foods always delivers hot food faster than expected. Love the service!"</p>
+        <span>- Krishna G.</span>
+      </div>
+      <div class="testimonial">
+        <p>"Their offers and restaurant variety make it my go-to app for food."</p>
+        <span>- Vinay k.</span>
+      </div>
+    </section>
+    </main>
+   
+  <section id="contact">
+    <h1>Contact Us</h1>
+    <p>Have a question? We’re here to help, 7 days a week.</p>
+  </section>
+  <main class="contact-wrapper">
+    <div class="contact-info-box">
+      <h2>Get in Touch</h2>
+      <p><strong>Phone:</strong>+91 90750 62081</p>
+      <p><strong>Email:</strong>atharvfood@gmail.com</p>
+      <p><strong>Address:</strong>Jaysingpur Gandhi Chouk 11th len,Nrusinhawadi road Kolhapur  </p>
+
+      <h3>Business Hours</h3>
+      <ul>
+        <li>Mon - Fri: 9 AM – 11 PM</li>
+        <li>Sat - Sun: 10 AM – 12 AM</li>
+      </ul>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61123.13901165522!2d74.51748280178741!3d16.766912108374886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc11f2f4aa1f8ad%3A0x6ed3d90e33621e9!2sJaysingpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1752742430999!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <div class="contact-form-box">
+      <h2>Send Us a Message</h2>
+      <script>
+    function sendToWhatsApp() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+
+      var phoneNumber = "9075062081";
+      
+      var url = "https://wa.me/919075062081?text=" 
+          + encodeURIComponent("Hello, my name is " + name + ". " + message);
+
+
+      window.open(url, '_Self');
+    }
+  </script>
+      
+  <form onsubmit="sendToWhatsApp(); return false;">
+        <label for="name">Name</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+        <p id="form-response"></p>
+      </form>
+    </div>
+  </div>
+</main>
+  </section>
+   <footer>
+    <p>&copy; 2025 Atharv Food. All rights reserved.</p>
+  </footer>
+  <script src="cart.js"></script>
+</body>
+</html>
+
+
+
